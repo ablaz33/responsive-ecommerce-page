@@ -2,57 +2,186 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- #region
+  <!-- #region
       - primary meta tags
     -->
 
-    <title>CozyNest - Handcrafted Fashion & Vintage Decor</title>
-    <meta name="title" content="CozyNest - Handcrafted Fashion & Vintage Decor">
-    <meta name="description"
-        content="This is CozyNest - Handcrafted Fashion & Vintage Decor E-commerce Website made by codewithsadee">
+  <title>CozyNest - Handcrafted Fashion & Vintage Decor</title>
+  <meta name="title" content="CozyNest - Handcrafted Fashion & Vintage Decor">
+  <meta name="description"
+    content="This is CozyNest - Handcrafted Fashion & Vintage Decor E-commerce Website made by codewithsadee">
 
-    <!-- #region
+  <!-- #region
       - favicon
     -->
-    <link rel="shortcut icon" href="./assets/images/favicon-light" type="image/svg+xml">
+  <link rel="shortcut icon" href="./assets/images/favicon-light" type="image/svg+xml">
 
-    <!-- #region
+  <!-- #region
       - css link
     -->
-    <link href="./dist/style.css" rel="stylesheet">
+  <link href="./dist/style.css" rel="stylesheet">
 
-    <!-- #region
+  <!-- #region
       - google font link
     -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@400;600;700&family=Montserrat:wght@400;600;700&display=swap"
-        rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@400;600;700&family=Montserrat:wght@400;600;700&display=swap"
+    rel="stylesheet">
 
-    <!-- #region
+  <!-- #region
       - material icon link
     -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close,menu,shopping_cart_checkout&display=block" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close,menu,shopping_cart_checkout&display=block" />
 
-    <!-- #region
+  <!-- #region
       - material icon link
     -->
-    <script src="./assets/js/script.js" defer></script>
+  <script src="./assets/js/script.js" defer></script>
 </head>
 
-<body>
-    <h1 class="text-5xl font-bold">
-        <!-- #region 
+<body class="bg-papaya_whip text-jet font-secondary">
+  <h1 class="text-5xl font-bold">
+    <!-- #region 
+         - #Header
+         -->
+    <header class="header" data-header>
+      <div class="">
+        <a href="#" class="logo">
+          <img src="./assets/images/logo-light.svg" width="129" height="16" alt="cozynest" class="">
+        </a>
+
+        <nav class="navbar" data-navbar>
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <span class="material-symbols-rounded" aria-hidden="true">
+              close
+            </span>
+          </button>
+
+          <ul class="navbar-list">
+            <li>
+              <a href="#home" class="navbar-link">Home</a>
+            </li>
+
+            <li>
+              <button class="navbar-link">
+                Shop
+
+                <ion-icon name="caret-forward-outline" aria-hidden="true" class=""></ion-icon>
+              </button>
+
+              <div class="dropdown" data-drop>
+                <div class="dropdown-content">
+                  <a href="#" class="">All Products</a>
+                  <a href="#" class="">Clothig</a>
+                  <a href="#" class="">Candles</a>
+                  <a href="#" class="">Accessories</a>
+                  <a href="#" class="">Bags</a>
+                  <a href="#" class="">Clocks</a>
+                  <a href="#" class="">SALE 🏷️</a>
+                </div>
+              </div>
+              <a href="#home" class="navbar-link">Home</a>
+            </li>
+
+            <li>
+              <a href="#blog" class="navbar-link">Blog</a>
+            </li>
+
+            <li>
+              <a href="#latest" class="navbar-link">Latest</a>
+            </li>
+
+            <li>
+              <a href="#info" class="navbar-link">Info</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="">
+          <button class="cart-toggler" aria-label="cart-toggler" data-cart-toggler>
+            <span class="material-symbols-rounded" aria-hidden="true">
+              shopping_cart_checkout
+            </span>
+          </button>
+          <div class="">
+            <div class="cart-modal" data-cart-modal>
+              <ul>
+                <li class="">
+                  <figure class="img-holder">
+                    <img src="./assets/images/cart-1.jpg" width="80" height="80" loading="lazy"
+                      alt="Handmade painted coffe mug" class="img-cover">
+                  </figure>
+
+                  <div class="text-wrapper">
+                    <span class="">Handmade painted cofee mug</span>
+                    <div class="">
+                      <p class="product-amount">1 x</p>
+                      <p class="price">$85.00</p>
+                    </div>
+                  </div>
+
+                  <button class="" arid-label="remove product">
+                    <span class="material-symbols-rounded" aria-hidden="true">
+                      close
+                    </span>
+                  </button>
+                </li>
+
+                <div class="divider"></div>
+
+                <li class="">
+                  <figure class="img-holder">
+                    <img src="./assets/images/cart-1.jpg" width="80" height="80" loading="lazy"
+                      alt="Handmade painted coffe mug" class="img-cover">
+                  </figure>
+
+                  <div class="text-wrapper">
+                    <span class="">Handmade painted cofee mug</span>
+                    <div class="">
+                      <p class="product-amount">1 x</p>
+                      <p class="price">$85.00</p>
+                    </div>
+                  </div>
+
+                  <button class="" arid-label="remove product">
+                    <span class="material-symbols-rounded" aria-hidden="true">
+                      close
+                    </span>
+                  </button>
+                </li>
+
+                <div class="divider"></div>
+
+                <div class="">
+                  <a href="#" class="btn" aria-label = "checkout">
+                    checkout
+                  </a>
+
+                  <a href="#" class="btn btn-text" aria-label = "view cart">
+                    view cart
+                  </a>
+
+                </div>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- #region 
          - ionicon link
          -->
-        <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
-    </h1>
+    <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
+  </h1>
 </body>
+
 
 </html>
