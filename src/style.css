@@ -29,6 +29,17 @@ ion-icon {
   --ionicon-stroke-width: 50px;
 }
 
+.img-holder {
+  @apply overflow-hidden;
+  aspect-ratio: var(--width) / var(--height); 
+}
+
+.img-cover {
+  @apply h-full
+  w-full
+  object-cover
+}
+
 /*COMPONENTS*/
 
 /*
@@ -51,7 +62,7 @@ ion-icon {
   transition-all
   duration-200
   ease-inExpo
-  /* invisible */
+  invisible
   
   /* responsive for md:1000pxx screen*/
   md:bg-papaya_whip
@@ -66,16 +77,54 @@ ion-icon {
   
   /* responsive for xxl:1600 screen*/
   xxl:text-lg
-  xxl:min-w-40
-  clip-path: insert(0 0 100% 0)
-
-  ;
+  xxl:min-w-40;
+  clip-path: inset(0 0 100% 0);
 }
 
+.dropdown.active .dropdown-content {
+  @apply visible
+  h-[184px]
 
+  /* responsive for xxl:1600 screen*/
+  xxl:h-60;
+  clip-path: inset(0 0 0 0);
+}
 
+.navbar-link:has(~ .dropdown.active) ion-icon {
+  @apply rotate-90;
+}
 
+.dropdown-content a {
+  @apply transition-colors
+  /* :hover  */
+  hover:text-butterscotch;
+}
 
+/* Button */
+
+.btn {
+  @apply text-white
+  font-bold
+  uppercase
+  tracking-widest
+  text-sm
+  max-w-max
+  rounded-md
+  duration-200
+  
+  /* :hover */
+  hover:shadow-lg;
+}
+
+.btn-text {
+  @apply text-caf_noir
+  ring-butterscotch
+  ring-1
+
+  /* :hover */
+  hover:shadow-lg
+  ;
+}
 /*HEADER*/
 
 .header {
@@ -186,5 +235,85 @@ ion-icon {
   xxl:text-xl;
 }
 
+/* cart */
+
+.cart-toggler {
+  @apply relative
+  grid
+  h-10
+  w-10
+  place-items-center
+  rounded-full
+
+  /* berfore */
+  before:text-papaya_whip
+  before:bg-red
+  before:absolute
+  before:content-['2']
+  before:right-0
+  before:top-0
+  before:z-10
+  before:h-5
+  before:w-5
+  before:rounded-full
+  before:text-sm
+  before:font-semibold
+
+  /* responsive for lg:1200 px screen */
+  lg:bg-caf_noir
+
+}
+
+.cart-modal {
+  @apply fixed
+  top-[24px]
+  right-2
+  max-w-72
+  rounded-lg
+  px-2
+  py-3
+  z-20
+  shadow-[0_-4px_0_#dd9d4cff]
+  origin-top
+  duration-75
+  ease-inExpo
+  invisible
+  opacity-0
+  
+  /* responsive for sm: 635px screen */
+  sm:right-14
+  ;
+  background: linear-gradient(359deg, #fde6b9, #fff3dcff);
+
+}
+
+.cart-modal.active {
+  @apply translate-y-0.5
+  visible
+  opacity-100;
+}
+
+.cart-modal .material-symbols-rounded {
+  font-variation-settings: "opsz" 20;
+}
+
+/* Overlay */
+
+.overlay {
+  @apply fixed
+  inset-0
+  z-40
+  ease-inExpo
+  duration-75
+  invisible
+  opacity-0;
+}
+
+.overlay.active {
+  @apply visible
+  opacity-100
+  backdrop-blur-sm;
+
+}
 
 
